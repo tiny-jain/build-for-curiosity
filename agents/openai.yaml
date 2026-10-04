@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build for Curiosity"
+  short_description: "Design tactile web experiences through playful iteration"
+  default_prompt: "Use $build-for-curiosity to turn my idea into a tactile web experience, starting with one interaction and refining it through browser feedback."
