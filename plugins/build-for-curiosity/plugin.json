@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "build-for-curiosity",
+  "version": "1.0.0",
+  "description": "Design tactile, curiosity-led web experiences through small, testable iterations.",
+  "author": {
+    "name": "Aditi Jain",
+    "url": "https://github.com/tiny-jain"
+  },
+  "homepage": "https://github.com/tiny-jain/build-for-curiosity",
+  "repository": "https://github.com/tiny-jain/build-for-curiosity",
+  "keywords": ["interaction-design", "creative-coding", "prototyping", "web-experiences"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Build for Curiosity",
+        "shortDescription": "Design playful web experiences",
+        "longDescription": "A skills-only plugin for product designers and builders creating tactile, curiosity-led web experiences. Start with one convincing object interaction, turn visual references into design decisions, and refine motion, depth, feedback, and discovery through small experiments. Keep product rules, input handling, presentation, and saved state separate. Includes a reusable workflow and reference patterns, not a game template or an asset library. Implementation depends on the tools available in your agent environment; browser testing and human playtesting remain necessary. No bundled MCP server, hooks, API keys, or hosted service.",
+        "developerName": "Aditi Jain",
+        "category": "Developer Tools",
+        "capabilities": [],
+        "websiteURL": "https://github.com/tiny-jain/build-for-curiosity",
+        "supportURL": "https://github.com/tiny-jain/build-for-curiosity/issues",
+        "defaultPrompt": [
+          "Help me plan a tactile web experience around one object and one meaningful reaction.",
+          "Refine the rotation of my existing object viewer without redesigning it.",
+          "Turn my visual reference into a small, testable interaction prototype."
+        ],
+        "brandColor": "#6B5134",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      },
+      "publication": {
+        "release_notes": "First skills-only plugin package. Includes the Build for Curiosity workflow and interaction patterns."
+      }
+    }
+  }
+}
