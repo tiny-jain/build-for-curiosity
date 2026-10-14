@@ -15,7 +15,39 @@ A reusable agent skill for product designers and builders making tactile, playfu
 
 The central loop is **invitation → response → discovery → another possibility**.
 
-## Install in Codex
+## Install with the Skills CLI
+
+```bash
+npx skills add tiny-jain/build-for-curiosity --skill build-for-curiosity
+```
+
+Choose your agent when prompted. For Codex specifically:
+
+```bash
+npx skills add tiny-jain/build-for-curiosity --skill build-for-curiosity --agent codex
+```
+
+The public repository is the installation source. Skills.sh directory discovery is
+based on CLI installation telemetry, not a separate publishing command. A working
+installation does not guarantee immediate search or leaderboard visibility.
+
+## Install as a Codex plugin
+
+This repository also contains a skills-only plugin and a repository marketplace:
+
+```bash
+codex plugin marketplace add tiny-jain/build-for-curiosity
+```
+
+Then open the plugin browser in a compatible desktop client, select
+**Aditi Jain's Plugins**, and install **Build for Curiosity**. Restart the client
+if the marketplace is not yet visible. Choose either the standalone skill or
+plugin installation to avoid duplicate copies of the same workflow.
+
+Repository distribution is separate from approval and publication in OpenAI's
+public Plugins Directory. This README does not claim a public directory listing.
+
+## Alternative: install the standalone skill in Codex
 
 Ask Codex:
 
@@ -55,5 +87,27 @@ The skill was authored separately from the third-party skills used during that p
 - [SKILL.md](SKILL.md): the agent workflow.
 - [Interaction patterns](references/interaction-patterns.md): guidance for depth, motion, and feedback.
 - [Codex metadata](agents/openai.yaml): display name and example invocation.
+- [Plugin manifest](plugins/build-for-curiosity/plugin.json): skills-only plugin metadata.
+- [Repository marketplace](.agents/plugins/marketplace.json): plugin discovery for compatible clients.
+
+## Maintaining the plugin package
+
+The root skill files are the source of truth. After editing them, regenerate the
+plugin's bundled copies and validate the package:
+
+```bash
+node scripts/package-plugin.mjs
+```
+
+To create a submission ZIP (requires the `zip` command):
+
+```bash
+node scripts/package-plugin.mjs /tmp/build-for-curiosity-plugin-1.0.0.zip
+```
+
+The ZIP includes only the manifest, original icon, and bundled skill files. It
+does not include repository history, the game, personal files, credentials, hooks,
+or MCP servers. Public directory submission still requires developer verification
+and OpenAI's review process.
 
 No API keys or paid services are required by the skill itself. The tools you choose for implementation or asset generation may have their own requirements.
