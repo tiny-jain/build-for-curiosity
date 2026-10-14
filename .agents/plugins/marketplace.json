@@ -1,0 +1,20 @@
+{
+  "name": "tiny-jain-plugins",
+  "interface": {
+    "displayName": "Aditi Jain's Plugins"
+  },
+  "plugins": [
+    {
+      "name": "build-for-curiosity",
+      "source": {
+        "source": "local",
+        "path": "./plugins/build-for-curiosity"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
